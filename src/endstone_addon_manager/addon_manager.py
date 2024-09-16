@@ -18,7 +18,7 @@ class AddonManager(Plugin):
     commands = {
         "addon": {
             "description": "Manage the resource and behavior packs",
-            "usages": ["/addon (list|install|uninstall|enable|disable)<action: ManageAddon>"],
+            "usages": ["/addon (list|info|install|uninstall|enable|disable)<action: ManageAddon>"],
             "aliass": ["am"],
             "permissions": ["addon_manager.command.addon"],
         }
@@ -33,5 +33,16 @@ class AddonManager(Plugin):
 
     def on_command(self, sender: CommandSender, command: Command, args: list[str]) -> bool:
         if command.name == "addon":
-            sender.send_message("this command has been run!")
+            if args[0] == "list":
+                pass
+            if args[0] == "info":
+                pass
+            if args[0] == "install":
+                pass
+            if args[0] == "uninstall":
+                pass
+            if args[0] == "enable":
+                pass
+            if args[0] == "disable":
+                pass
         return True
